@@ -133,13 +133,13 @@ input.form-control {
     opacity: 1; /* exibe descrição*/
 }
 
-.btn{
+.btn comp{
 	background-color: saddlebrown;
 }
-.btn:hover{
+.btn comp:hover{
 	background-color:saddlebrown;
 }
-.btn:active{
+.btn comp:active{
 	background-color:saddlebrown!important;/*cor nao some ao clicar*/
 	outline:none;
 }
