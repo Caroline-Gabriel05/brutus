@@ -92,3 +92,54 @@ input.form-control {
 .form-control{
     font-family: sans-serif;
 }
+
+.card {
+    width: 80%; /* deixa a caixa menor */
+	height:400px;
+    margin: auto;
+    transition: transform 0.3s ease,width 0.3s ease, height 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /*img menor*/
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1em; /*o titulo fica visivel*/
+    font-weight: bold;
+}
+
+.card-body .card-text,
+.card-body button { 
+    opacity: 0;/*oculta a descrição*/
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05); /* aumenta ligeiramente o tamanho da div */
+    width: 90%;  /* aumenta a largura */
+    height: 440px /* aumenta a altura */	
+}
+
+.card:hover .card-body .card-text,
+.card:hover .card-body button {
+    opacity: 1; /* exibe descrição*/
+}
+
+.btn{
+	background-color: saddlebrown;
+}
+.btn:hover{
+	background-color:saddlebrown;
+}
+.btn:active{
+	background-color:saddlebrown!important;/*cor nao some ao clicar*/
+	outline:none;
+}
