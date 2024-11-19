@@ -60,6 +60,7 @@ CREATE TABLE `itens` (
   `nome` varchar(50) DEFAULT NULL,
   `descricao` varchar(200) DEFAULT NULL,
   `preco` double DEFAULT NULL,
+  `imagem` varchar(200) NOT NULL,
   `fk_Categoria_cod_categoria` int(11) DEFAULT NULL,
   `fk_Pedidos_cod_pedido` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
