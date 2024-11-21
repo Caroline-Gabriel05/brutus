@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../custom.css">
 </head>
 <body>
+    
+<?php include_once "../cabecalho.html"; ?>
     <div class="container mt-5">
         <h2 class="text-center mb-4">Criar Conta</h2>
         <form action="cadastro.php" method="POST" onsubmit="return validarSenhas();">
@@ -91,6 +93,7 @@
             <button type="submit" class="btn btn-block mt-4"  name="btnCadastrar" style="background-color: saddlebrown;"><a href="#">Criar Conta</a></button>
         </form>
     </div>
+    <?php include_once "../rodape.html"; ?>
 <script type="text/javascript" src="cep.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>

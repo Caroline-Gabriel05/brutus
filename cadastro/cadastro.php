@@ -1,6 +1,6 @@
 <?php
 	$servername = "localhost";
-	$database = "janta";
+	$database = "brutus";
 	$username = "root";
 	$password = ""; 
 
@@ -16,7 +16,7 @@
 
 
         $result = mysqli_query($conn, "INSERT INTO usuario (nome, email, cpf, telefone, senha, fk_tipos_usuario_codigo )
-		VALUES ('$nome', '$email', '$cpf', '$telefone', '$senha', '2') ") ;
+		VALUES ('$nome', '$email', '$cpf', '$telefone', md5($senha), '2') ") ;
 
         $bairro=$_POST['bairro'];
         $rua=$_POST['rua'];

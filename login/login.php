@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<?php include_once "../cabecalho.html"; ?>
     <!-- Login 12 - Bootstrap Brain Component -->
 <section class="py-3 py-md-5 py-xl-8">
     <div class="container">
@@ -17,7 +18,7 @@
         <div class="col-12">
           <div class="mb-5">
             <h2 class="display-5 fw-bold text-center">Login</h2>
-            <p class="text-center m-0">Não tem conta? <a href="../cadastro/cadastro.html">Cadastre-se</a></p>
+            <p class="text-center m-0">Não tem conta? <a href="../cadastro/cadastrar.php">Cadastre-se</a></p>
           </div>
         </div>
       </div>
@@ -25,7 +26,7 @@
         <div class="col-12 col-lg-10 col-xl-8">
           <div class="row gy-5 justify-content-center">
             <div class="col-12 col-lg-5">
-              <form action="#!">
+              <form action="validacao.php" method="post">
                 <div class="row gy-3 overflow-hidden">
                   <div class="col-12">
                     <div class="form-floating mb-3">
@@ -92,5 +93,6 @@
       </div>
     </div>
   </section>
+  <?php include_once "../rodape.html"; ?>
 </body>
 </html>

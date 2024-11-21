@@ -8,8 +8,8 @@
 }
 
 body {
-    font-family: sans-serif;
-    background-color: #fff2cc;
+    font-family: 'Escopedia',sans-serif;
+    background-color: black;
     color: rgb(211, 108, 35);
 }
 
@@ -69,8 +69,19 @@ input.form-control {
 
 .dropdown-menu {
     text-align: center;
+
+}
+.dropdown-toggle {/*corrigindo o dropdown*/
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
+.dropdown-toggle:hover,/*corrigindo o dropdown*/
+.dropdown-toggle:focus {
+    color: #ef890d; 
+}
 .navbar-icons {
     display: flex;
     align-items: center;

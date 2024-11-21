@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!--#include file='cabecalho.html'-->
+ <?php include_once "cabecalho.html"; ?>
     <!-- Carousel -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -34,7 +34,7 @@
         </button>
     </div> 
     
-      <!--#include file='rodape.html'-->
+    <?php include_once "rodape.html"; ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
