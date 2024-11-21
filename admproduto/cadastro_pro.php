@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <button type="submit" name="btn_salvar" class="btn btn-primary w-100">Adicionar Produto</button>
+                <button type="submit" style="background-color: saddlebrown;" name="btn_salvar" class="btn w-100">Adicionar Produto</button>
             </div>
         </form>
     </div>
