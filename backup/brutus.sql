@@ -32,6 +32,10 @@ CREATE TABLE `categoria` (
   `nome` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `categoria` (`cod_categoria`, `nome`) VALUES
+(1, 'Hamburguer'),
+(2, 'Combos');
+
 -- --------------------------------------------------------
 
 --
