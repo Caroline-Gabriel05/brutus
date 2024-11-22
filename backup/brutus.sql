@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/11/2024 às 23:44
+-- Tempo de geração: 20/11/2024 às 14:09
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -49,6 +49,14 @@ CREATE TABLE `endereco` (
   `fk_Usuario_codigo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `endereco`
+--
+
+INSERT INTO `endereco` (`cod_endereco`, `cep`, `rua`, `bairro`, `numero`, `complemento`, `cidade`, `fk_Usuario_codigo`) VALUES
+(5, '19907-310', 'Rua Marechal Deodoro', 'Vila Sá', 310, '', 'Ourinhos', 6),
+(6, '19907-310', 'Rua Marechal Deodoro', 'Vila Sá', 310, '', 'Ourinhos', 7);
+
 -- --------------------------------------------------------
 
 --
@@ -64,6 +72,16 @@ CREATE TABLE `itens` (
   `fk_Categoria_cod_categoria` int(11) DEFAULT NULL,
   `fk_Pedidos_cod_pedido` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `itens`
+--
+
+INSERT INTO `itens` (`cod_item`, `nome`, `descricao`, `preco`, `imagem`, `fk_Categoria_cod_categoria`, `fk_Pedidos_cod_pedido`) VALUES
+(1, 'Hambúrguer Clássico', 'Carne de vaca 100% Angus, queijo muçarela, alface, tomate fresco e maionese caseira, servido no pão de leite.', 26, 'burguerclassico.jpg', NULL, NULL),
+(2, 'Burguer BBQ', 'Carne Angus grelhada, queijo cheddar, cebola caramelizada, bacon crocante e molho barbecue artesanal, servido no pão.', 32, 'burguerbbq.jpg', NULL, NULL),
+(5, 'Burguer com Picles e Queijo', 'Carne Angus, queijo prato, alface, tomate, picles de pepino crocante e maionese, servido no pão de hambúrguer.', 27, 'pepino.png', NULL, NULL),
+(6, 'Burguer do Chef', 'Carne de Angus, queijo gorgonzola, rúcula, cebola caramelizada e molho de mostarda, pão artesanal.', 34, 'burguerchef.png', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -149,6 +167,14 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Despejando dados para a tabela `usuario`
+--
+
+INSERT INTO `usuario` (`codigo`, `nome`, `email`, `telefone`, `senha`, `cpf`, `fk_tipos_usuario_codigo`) VALUES
+(6, 'Caroline Gabriel', 'carolinemariagabriel@gmail.com', '(12) 12233-333', '81dc9bdb52d04dc20036dbd8313ed055', '255.555.555-55', 2),
+(7, 'Caroline Gabriel', 'tailacrs@gmail.com', '(12) 12233-333', '202cb962ac59075b964b07152d234b70', '255.555.555-55', 2);
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -228,13 +254,13 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `endereco`
 --
 ALTER TABLE `endereco`
-  MODIFY `cod_endereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cod_endereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `itens`
 --
 ALTER TABLE `itens`
-  MODIFY `cod_item` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `pagamentos`
@@ -264,7 +290,7 @@ ALTER TABLE `tipos_usuario`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restrições para tabelas despejadas

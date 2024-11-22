@@ -1,3 +1,6 @@
+<?php
+session_start(); // Inicie a sessão aqui, antes de qualquer HTML
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +21,17 @@
         <div class="col-12">
           <div class="mb-5">
             <h2 class="display-5 fw-bold text-center">Login</h2>
-            <p class="text-center m-0">Não tem conta? <a href="../cadastro/cadastrar.php">Cadastre-se</a></p>
+            <p class="text-center m-0">Não tem conta? <a href="/brutus/cadastro/cadastrar.php">Cadastre-se</a></p>
           </div>
         </div>
       </div>
+      <?php
+// Exibe a mensagem de erro, se houver
+if (isset($_SESSION['erro_login'])) {
+    echo "<p style='color: red;'>" . $_SESSION['erro_login'] . "</p>";
+    unset($_SESSION['erro_login']); // Remove a mensagem após exibi-la
+}
+?>
       <div class="row justify-content-center">
         <div class="col-12 col-lg-10 col-xl-8">
           <div class="row gy-5 justify-content-center">
@@ -93,6 +103,7 @@
       </div>
     </div>
   </section>
+
   <?php include_once "../rodape.html"; ?>
 </body>
 </html>

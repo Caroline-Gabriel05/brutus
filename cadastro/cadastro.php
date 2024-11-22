@@ -6,8 +6,7 @@
 
 	$conn = new mysqli($servername,$username,$password,$database);
    
-    if ( isset($_POST["btnCadastrar"]) )
-    {
+    if ( isset($_POST["btnCadastrar"]) ){
         $nome=$_POST['nome'];
         $email=$_POST['email'];
         $cpf=$_POST['cpf'];
@@ -28,9 +27,9 @@
         $result = mysqli_query($conn, "INSERT INTO endereco (cep, rua, bairro, numero, complemento, cidade, fk_Usuario_codigo )
 		VALUES ('$cep', '$rua', '$bairro', '$numero', '$complemento', 'Ourinhos', '$ult') ") ;
 
-        printf("<pre>\n");
-        print_r($_REQUEST);
-        printf("<pre>\n");
+        $codigo = mysqli_insert_id($conn);
+        $_SESSION['id_logado'] = $codigo;
+        header('Location: /brutus/index.php'); // Redireciona para a página inicial
     }
 
 ?>
