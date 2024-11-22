@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Escopedia',sans-serif;
     background-color: black;
     color: rgb(211, 108, 35);
 }
@@ -37,7 +37,15 @@ input.form-control {
     display: flex;
     align-items: center;
 }
-
+.logo {
+    justify-content: center;
+    font-family: 'borcer',Borcer;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f9f9f9;
+    display: flex;
+    align-items: center ;
+}
 .navbar-brand img {
     height: 40px;
     margin-right: 8px;
@@ -153,4 +161,16 @@ input.form-control {
 .btn comp:active{
 	background-color:saddlebrown!important;/*cor nao some ao clicar*/
 	outline:none;
+}
+.text_box {
+    font-family: 'Escopedia',sans-serif;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    background-color: #f9f9f9;
+    text-align: justify;
+    box-shadow: none;
 }

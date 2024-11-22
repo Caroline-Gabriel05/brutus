@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            font-weight: normal;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        ul li a:hover {
+            color: saddlebrown; /* Destaque ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, administrador!</h1>
+    <ul>
+        <li><a href="#dados-pessoais" onclick="showSection(event, 'dados-pessoais')" class="active">Dados Pessoais</a></li>
+        <li><a href="#cadastro-produto" onclick="showSection(event, 'cadastro-produto')">Cadastro de Produto</a></li>
+        <li><a href="#alterar" onclick="showSection(event, 'alterar')">Alterar</a></li>
+        <li><a href="#excluir" onclick="showSection(event, 'excluir')">Excluir</a></li>
+        <li><a href="#sair" onclick="showSection(event, 'sair')">Sair</a></li>
+    </ul>
+</body>
+</html>
