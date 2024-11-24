@@ -8,21 +8,21 @@
 }
 
 body {
-    font-family: 'Escopedia',sans-serif;
-    background-color: black;
-    color: rgb(211, 108, 35);
+    font-family: 'Escopedia',sans-serif !important;
+    background-color: black !important;
+    color: rgb(211, 108, 35) ;
 }
 
 a {
-    color: #fff2cc;
+    color: #fff2cc ;
 }
 
 input.form-control {
-    border: 2px solid saddlebrown; 
+    border: 2px solid saddlebrown !important; 
 }
 
 .navbar {
-    background-color: black !important;
+    background-color: black ;
     width: 100%;
     height: 100px;
     display: flex;
@@ -33,18 +33,24 @@ input.form-control {
 .navbar-brand {
     font-size: 24px;
     font-weight: bold;
-    color: #fff2cc;
+    color: #fff2cc ;
     display: flex;
     align-items: center;
 }
 .logo {
     justify-content: center;
-    font-family: 'borcer',Borcer;
+    font-family: 'borcer',Borcer !important;
     font-size: 40px;
-    font-weight: bold;
-    color: #f9f9f9;
+    color: #f9f9f9 !important;
     display: flex;
     align-items: center ;
+}
+.logo0 img {
+    margin-top: -20px; /* Ajuste o valor para subir a logo */
+}
+
+.login {
+    color: #f9f9f9; /* usando apenas na tela de login, textos, google, facebook*/
 }
 .navbar-brand img {
     height: 40px;
@@ -63,15 +69,15 @@ input.form-control {
 }
 
 .nav-link {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 15px;
-    margin-right: 15px;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    margin-right: 15px !important;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #ef890d;
+    color: #ef890d !important ;
     transform: scale(1.1);
 }
 
@@ -80,7 +86,7 @@ input.form-control {
 
 }
 .dropdown-toggle {/*corrigindo o dropdown*/
-    color: #ffffff;
+    color: #ffffff ;
     font-weight: bold;
     font-size: 15px;
     transition: color 0.3s ease;
@@ -88,7 +94,7 @@ input.form-control {
 
 .dropdown-toggle:hover,/*corrigindo o dropdown*/
 .dropdown-toggle:focus {
-    color: #ef890d; 
+    color: #ef890d !important; 
 }
 .navbar-icons {
     display: flex;
@@ -98,14 +104,14 @@ input.form-control {
 }
 
 .navbar-icons a {
-    color: #fff2cc;
+    color: #fff2cc ;
     margin-left: 20px;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .navbar-icons a:hover {
-    color: #ef890d;
+    color: #ef890d ;
 }
 
 .form-control{
@@ -114,7 +120,7 @@ input.form-control {
 
 .card {
     width: 80%; /* deixa a caixa menor */
-	height:400px;
+	min-height: 500px !important;
     margin: auto;
     transition: transform 0.3s ease,width 0.3s ease, height 0.3s ease;
     overflow: hidden;
@@ -122,41 +128,81 @@ input.form-control {
 }
 
 .card-img-top {
-    width: 100%;
+    width: 95% !important;
     height: 200px; /*img menor*/
     object-fit: cover;
+    margin: 7px auto 0 !important;
+    display: block;
     transition: transform 0.3s ease;
+    
 }
 
 .card-title {
+    font-family: 'Escopedia',sans-serif !important;
     text-align: center;
     font-size: 1em; /*o titulo fica visivel*/
     font-weight: bold;
 }
 
-.card-body .card-text,
+.card-body{    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 10px;}
+.card-text,
 .card-body button { 
-    opacity: 0;/*oculta a descrição*/
+   /* opacity: 0;/*oculta a descrição*/
+    font-family: 'Escopedia',sans-serif !important;
     transition: opacity 0.3s ease;
     text-align: center;
+    max-height: 6em; /* Limita altura ingredientes */
+    overflow-y: auto; /* scroll vertical*/
+    text-overflow: ellipsis;
+    white-space: normal;
+    /**/
+   
 }
-
+.card-preco{
+    text-align: center;
+    font-family: 'borcer',Borcer;
+    max-height: 3em; /* Limita a altura do texto */
+    text-overflow: ellipsis;
+    white-space: normal;   
+}
 .card:hover {
-    transform: scale(1.05); /* aumenta ligeiramente o tamanho da div */
+    transform: scale(1.05,1); /* aumenta ligeiramente o tamanho da div */
     width: 90%;  /* aumenta a largura */
-    height: 440px /* aumenta a altura */	
+   
 }
 
 .card:hover .card-body .card-text,
 .card:hover .card-body button {
     opacity: 1; /* exibe descrição*/
 }
+.comprar {
+    font-family: 'Escopedia',sans-serif !important;
+    font-weight: bold !important;
+    background-color: #ef890d !important; 
+    color: #f9f9f9 !important;           
+    border: none;            
+    border-radius: 5px;      
+    padding: 10px;          
+    font-size: 16px;         
+    transition: transform 0.3s, box-shadow 0.3s; 
+    }
+
+   .comprar:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 10px saddlebrown;
+    } 
+    
 
 .btn comp{
 	background-color: saddlebrown;
 }
 .btn comp:hover{
-	background-color:saddlebrown;
+	background-color:saddlebrown ;
 }
 .btn comp:active{
 	background-color:saddlebrown!important;/*cor nao some ao clicar*/
@@ -173,4 +219,7 @@ input.form-control {
     background-color: #f9f9f9;
     text-align: justify;
     box-shadow: none;
+}
+body {
+    background-color: black !important;
 }
