@@ -16,7 +16,7 @@ if (isset($_POST["btn_salvar"])) {
     $nome = $_POST['nome'];
     $preco = $_POST['preco'];
     $descricao = $_POST['descricao'];
-    $categoria = 1; // Exemplo estático
+    $categoria = $_POST['categoria']; // Exemplo estático
 
     // Validar e processar upload de imagem
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] == UPLOAD_ERR_OK) {
