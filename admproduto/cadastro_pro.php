@@ -31,25 +31,6 @@
                   <img id="imgprod" style="width: 150px; height: 150px;">
                 </div>
             </div>
-            <div class="col-md-6">
-                <label for="categoria" class="form-label">Categoria</label>
-                <?php 
-                $servername = "localhost";
-                $database = "brutus";
-                $username = "root";
-                $password = "";
-            
-                $conn = mysqli_connect($servername, $username, $password, $database);
-                $cmdsql="SELECT * FROM categoria";
-                $execcmd=mysqli_query($conn,$cmdsql);
-                printf("<select name='categoria'>\n");
-                while ( $reglido=mysqli_fetch_array($execcmd) )
-                { 
-                printf("  <option value='$reglido[cod_categoria]'>$reglido[$cod_categoria]-$reglido[nome]</option>\n");
-                } 
-                printf("</select>\n");
-?>
-            </div>
             <div class="col-12">
                 <button type="submit" style="background-color: saddlebrown;" name="btn_salvar" class="btn w-100">Adicionar Produto</button>
             </div>
